@@ -91,12 +91,12 @@ class EmployeePerformanceView(generics.ListAPIView):
         performance_data = []
         
         for emp in employees:
-            # Calculate average rating
+            
             avg_rating = PerformanceReview.objects.filter(
                 employee=emp
             ).aggregate(avg=Avg('rating'))['avg'] or 0
             
-            # Calculate attendance percentage
+        
             total_days = Attendance.objects.filter(
                 employee=emp,
                 date__gte=thirty_days_ago
