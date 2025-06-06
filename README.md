@@ -180,7 +180,7 @@ python manage.py test
 
 - Set `DEBUG = False` in `settings.py`
 - Use environment variables for sensitive data
-- Set up Gunicorn/Nginx for production server
+- Set up Gunicorn/Nginx for a production server
 - Secure the authentication mechanism
 - Configure PostgreSQL credentials properly
 
